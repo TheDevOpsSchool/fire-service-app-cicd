@@ -1,0 +1,17 @@
+.image {
+    background-color: yellow;
+}
+
+.h1-first {
+    color: green;
+    border: 1px solid red;
+}
+
+.text1 {
+    background-color: yellow;
+}
+
+.text2 {
+    background-color: rgb(26, 26, 115);
+    color: white;
+}
