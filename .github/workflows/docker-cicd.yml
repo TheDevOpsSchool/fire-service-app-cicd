@@ -20,7 +20,12 @@ jobs:
       run: docker build . --file dockerfile --tag goodytech/fireservice
   
     - name: Login to Docker Hub
-      run:  docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_ACCESS_TOKEN }}
+    - env:
+        DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+        DOCKER_ACCESS_TOKEN: ${{ secrets.DOCKER_ACCESS_TOKEN }}
+      run: | 
+      echo "$DOCKER_ACCESS_TOKEN" | docker login -u "$DOCKER_USERNAME" --password-stdin
+      docker push goody/fireservice
  
     - name: Push to Dockerhub
       run:  docker push goodytech/fireservice
