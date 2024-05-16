@@ -2,7 +2,7 @@ name: Docker Image CI
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "Sarahsaquin" ]
   pull_request:
     branches: [ "main" ]
 
@@ -15,10 +15,10 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Build the Docker image
-      run: docker build . --file dockerfile --tag guddytech/fireservice
+      run: docker build . --file docker-cicd--tag Sarahsaquin/fireservice
     - uses: actions/checkout@v4
     - name: Push to Dockerhub
-      run: docker push guddytech/fireservice
+      run: docker push Sarahsaquin/fireservice
       
     - name: Login to Docker Hub
-      run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_ACCESS_TOKEN }}
+      run: docker login -u ${{ secrets.SARAH_DOCKER_USERNAME }} -p ${{ secrets.SARAH_DOCKER_ACCESS_TOKEN }}
