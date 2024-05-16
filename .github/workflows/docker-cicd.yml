@@ -15,7 +15,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Build the Docker image
-      run: docker build . --file docker-cicd--tag Sarahsaquin/fireservice
+      run: docker build . --file dockerfil--tag Sarahsaquin/fireservice
     - uses: actions/checkout@v4
     - name: Push to Dockerhub
       run: docker push Sarahsaquin/fireservice
