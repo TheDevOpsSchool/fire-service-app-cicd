@@ -33,5 +33,5 @@ jobs:
         context: .
         file: dockerfile
         push: true
-        tags: ${{ secrets.ELV_DOCKER_USERNAME }}/go-app:latest
+        tags: ${{ secrets.ELV_DOCKER_USERNAME }}/fireservice-app:latest
 
