@@ -12,10 +12,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Build the Docker image
-      run: docker build . --file dockerfile --tag goodnessmark/fireservice
-    - uses: actions/checkout@v2  
+    - uses: actions/checkout@v3
+    
+    # - name: Build the Docker image
+    #   run: docker build . --file dockerfile --tag elvdevops/fireservice
+    # - uses: actions/checkout@v2  
     
     - name: Log in to Docker Hub
       uses: docker/login-action@v3
